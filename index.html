@@ -68,6 +68,7 @@
 			#section1 {
 				background-image: url(imgs/bg2_low.jpg);
 				background-position: center;
+				padding: 6% 0 0 0;
 			}
 
 			#section2 {
@@ -102,35 +103,37 @@
 
 			#section1 {
 				background-image: url(imgs/bg2.jpg);
-				background-position: center;
+				/* background-position: center; */
+				padding: 6% 0 0 0;
 			}
 
 			#section2 {
 				background-image: url(imgs/bg3.jpg);
-				background-position: center;
+				/* background-position: center; */
 				padding: 6% 0 0 0;
 			}
 		}
 
-		#section0 h1 {
+		#section0 .black-layer h1 {
 			top: 40%;
 			transform: translateY(-40%);
 			position: relative;
 		}
 
-		#section0 h2 {
+		#section0 .black-layer h2 {
 			top: 45%;
 			transform: translateY(-45%);
 			position: relative;
 		}
 
-		#section1 h1 {
-			top: 50%;
-			transform: translateY(-50%);
+		#section1 .black-layer h2 {
+			top: 5%;
+			transform: translateY(-5%);
 			position: relative;
+			font-family: 'Source Sans Pro', sans-serif;
 		}
 
-		#section2 h1 {
+		#section2 .black-layer h1 {
 			top: 50%;
 			transform: translateY(-50%);
 			position: relative;
@@ -141,18 +144,18 @@
 			padding: 6% 0 0 0;
 		}
 
-		#section3 h1 {
+		#section3 .black-layer h1 {
 			color: #000;
 		}
 
-		a:link, a:visited {
+		a:link,
+		a:visited {
 			color: white;
 		}
 
 		a:hover {
 			color: red;
 		}
-
 	</style>
 
 	<!--[if IE]>
@@ -192,14 +195,33 @@
 					31<sup>st</sup> August 2017<br> Singapore Sports Hub
 				</h2>
 				<h2>
-					<a href="#anchor1"><u>(Scroll Down for More Information)</u></a>
+					<a href="#anchor1">
+						<u>(Scroll Down for More Information)</u>
+					</a>
 				</h2>
 			</div>
 		</div>
 		<!-- page two: timeline -->
 		<div class="section" id="section1" data-anchor="anchor1">
 			<div class="black-layer">
-				<h1>Event Timeline</h1>
+				<ul class="timeline">
+					<li class="event" data-date="1:00 - 2:00pm">
+						<h3>Lunch at Kallang Theatre</h3>
+					</li>
+					<li class="event" data-date="2:30 - 4:00pm">
+						<h3><a href="#anchor2"><u>Amazing Race</u></a> | Rock <Climbing></Climbing></h3>
+						<h3>Water Sports | Indoor Courts </h3>
+					</li>
+					<li class="event" data-date="5:00 - 8:00pm">
+						<h3>Main Event</h3>
+						<p>This is where it all goes down. You will compete head to head with your friends and rivals. Get ready!</p>
+					</li>
+					<li class="event" data-date="8:30 - 9:30pm">
+						<h3>Closing Ceremony</h3>
+						<p>See how is the victor and who are the losers. The big stage is where the winners bask in their own glory.</p>
+					</li>
+				</ul>
+
 			</div>
 		</div>
 		<!-- page three: amazing race -->
@@ -216,3 +238,82 @@
 </body>
 
 </html>
+
+<style>
+	/* Import */
+
+	@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Oswald:400,300,700);
+	/* Variables */
+	/* Base */
+
+	/* Timeline */
+
+	.timeline {
+		border-left: 4px solid #4298C3;
+		border-bottom-right-radius: 4px;
+		border-top-right-radius: 4px;
+		background: rgba(255, 255, 255, 0.03);
+		color: rgba(255, 255, 255, 0.9);
+		font-family: 'Source Sans Pro', sans-serif;
+		margin: 3% auto;
+		position: relative;
+		padding-left: 50px;
+		padding-top: 1%;
+		list-style: none;
+		text-align: left;
+		font-weight: 100;
+		max-width: 50%;
+	}
+
+	.timeline h1,
+	.timeline h2,
+	.timeline h3 {
+		font-family: 'Oswald', sans-serif;
+		font-weight: 100;
+		font-size: 3vw;
+		color: white;
+	}
+
+	.timeline .event {
+		border-bottom: 1px dashed rgba(255, 255, 255, 0.8);
+		padding-bottom: 2%;
+		margin-bottom: 2%;
+		position: relative;
+	}
+
+	.timeline .event:last-of-type {
+		padding-bottom: 0;
+		margin-bottom: 0;
+		border: none;
+	}
+
+	.timeline .event:before,
+	.timeline .event:after {
+		position: absolute;
+		display: block;
+		top: 0;
+	}
+
+	.timeline .event:before {
+		left: -25%;
+		color: rgba(255, 255, 255, 0.7);
+		content: attr(data-date);
+		text-align: right;
+		font-weight: 100;
+		font-size: 1.2vw;
+		min-width: 15%;
+		margin-top: 3%;
+	}
+
+	.timeline .event:after {
+		box-shadow: 0 0 0 4px #4298c3;
+		left: -7.7%;
+		background: #313534;
+		border-radius: 50%;
+		height: 11px;
+		width: 11px;
+		content: "";
+		top: 5px;
+		margin-top: 3%;
+	}
+</style>
