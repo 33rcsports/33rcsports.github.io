@@ -44,7 +44,9 @@
 		#section2,
 		#section3,
 		#section4,
-		#section5 {
+		#section5,
+		#section6,
+		#section7 {
 			background-size: cover;
 			background-attachment: fixed;
 		}
@@ -61,7 +63,7 @@
 			}
 
 			h2 {
-				font-size: 3vw;
+				font-size: 4vw;
 				font-family: arial, helvetica;
 				color: #fff;
 				margin: 0;
@@ -99,6 +101,18 @@
 
 			#section5 {
 				background-image: url(imgs/bg6.jpg);
+				background-position: center;
+				padding: 6% 0 0 0;
+			}
+
+			#section6 {
+				background-image: url(imgs/bg7.jpg);
+				background-position: center;
+				padding: 6% 0 0 0;
+			}
+
+			#section7 {
+				background-image: url(imgs/bg8.jpg);
 				background-position: center;
 				padding: 6% 0 0 0;
 			}
@@ -153,6 +167,18 @@
 
 			#section5 {
 				background-image: url(imgs/bg6.jpg);
+				background-position: center;
+				padding: 6% 0 0 0;
+			}
+
+			#section6 {
+				background-image: url(imgs/bg7.jpg);
+				background-position: center;
+				padding: 6% 0 0 0;
+			}
+
+			#section7 {
+				background-image: url(imgs/bg8.jpg);
 				background-position: center;
 				padding: 6% 0 0 0;
 			}
@@ -225,6 +251,30 @@
 			position: relative;
 		}
 
+		#section6 .black-layer h1 {
+			top: 30%;
+			transform: translateY(-30%);
+			position: relative;
+		}
+
+		#section6 .black-layer h2 {
+			top: 35%;
+			transform: translateY(-35%);
+			position: relative;
+		}
+
+		#section7 .black-layer h1 {
+			top: 30%;
+			transform: translateY(-30%);
+			position: relative;
+		}
+
+		#section7 .black-layer h2 {
+			top: 35%;
+			transform: translateY(-35%);
+			position: relative;
+		}
+
 		a:link,
 		a:visited {
 			color: white;
@@ -251,10 +301,10 @@
 		$(document).ready(function () {
 			$('#fullpage').fullpage({
 				verticalCentered: false,
-				anchors: ['main', 'timeline', 'amazing-race', 'bowling-competition', 'water-sports', 'rock-climbing'],
+				anchors: ['main', 'timeline', 'amazing-race', 'bowling-competition', 'water-sports', 'rock-climbing', 'leisure-sports', 'mass-walk'],
 				navigation: true,
 				navigationPosition: 'right',
-				navigationTooltips: ['Home', 'Timeline', 'Amazing Race', 'Bowling Competition', 'Water Sports', 'Rock Climbing'],
+				navigationTooltips: ['Home', 'Timeline', 'Amazing Race', 'Bowling Competition', 'Water Sports', 'Rock Climbing', 'Leisure Sports', 'Mass Walk'],
 				//to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
 				css3: false
 			});
@@ -296,11 +346,13 @@
 						<h3>
 							<a href="#water-sports"><u>Water Sports</u></a> | 
 							<a href="#rock-climbing"><u>Rock Climbing</u></a> | 
-							<a href="#amazing-race"><u>Indoor Courts</u></a>
+							<a href="#leisure-sports"><u>Indoor Courts</u></a>
 						</h3>
 					</li>
 					<li class="event" data-date="4:00 - 5:30pm">
-						<h3>Mass Walk</h3>
+						<h3>
+							<a href="#mass-walk"><u>Mass Walk</u></a>
+						</h3>
 					</li>
 					<li class="event" data-date="5:30 - 6:00pm">
 						<h3>Closing Speech by CEO and Lucky Draw</h3>
@@ -352,6 +404,30 @@
 				<h2>Loosen up your body by taking on the tall walls of Climb Central!</h2><br><br>
 				<h2>A true playground for rock climbing enthusiasts!<br><br>
 					<a href="https://hub.dso.org.sg/dsorc33/Pages/33RC_Sports/Sports_Day_2017/Rock_Climbing.aspx" class="btn btn-success btn-lg">
+						<i class="fa fa-search" aria-hidden="true"></i> View More Details
+					</a>
+				</h2>
+			</div>
+		</div>
+		<!-- page seven: indoor courts -->
+		<div class="section" id="section6" data-anchor="leisure-sports">
+			<div class="black-layer">
+				<h1>Indoor Courts</h1>
+				<h2>Enjoy the indoor court facilities in OCBC Arena!</h2><br><br>
+				<h2>
+					<a href="https://hub.dso.org.sg/dsorc33/Pages/33RC_Sports/Sports_Day_2017/Leisure_Sports.aspx" class="btn btn-success btn-lg">
+						<i class="fa fa-search" aria-hidden="true"></i> View More Details
+					</a>
+				</h2>
+			</div>
+		</div>
+		<!-- page six: rock climbing -->
+		<div class="section" id="section7" data-anchor="mass-walk">
+			<div class="black-layer">
+				<h1>Mass Walk</h1>
+				<h2>Finish DSO Sports Day with a breezy walk along the Tanjong Rhu Promenade with scenic views!</h2><br><br>
+				<h2>Walk for a cause and distance clocked will be part of DSO's CSR effort!<br><br>
+					<a href="https://hub.dso.org.sg/dsorc33/Pages/33RC_Sports/Sports_Day_2017/Mass_Walk.aspx" class="btn btn-success btn-lg">
 						<i class="fa fa-search" aria-hidden="true"></i> View More Details
 					</a>
 				</h2>
