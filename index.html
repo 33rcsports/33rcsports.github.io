@@ -16,7 +16,9 @@
 
 	
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
 
 	<style>
 		/* Centered texts in each section
@@ -80,6 +82,12 @@
 				background-position: center;
 				padding: 6% 0 0 0;
 			}
+
+			#section3 {
+				background-image: url(imgs/bg4.jpg);
+				background-position: center;
+				padding: 6% 0 0 0;
+			}
 		}
 
 		@media screen and (min-width: 641px) {
@@ -107,13 +115,19 @@
 
 			#section1 {
 				background-image: url(imgs/bg2.jpg);
-				/* background-position: center; */
+				background-position: center;
 				padding: 6% 0 0 0;
 			}
 
 			#section2 {
 				background-image: url(imgs/bg3.jpg);
-				/* background-position: center; */
+				background-position: center;
+				padding: 6% 0 0 0;
+			}
+
+			#section3 {
+				background-image: url(imgs/bg4.jpg);
+				background-position: center;
 				padding: 6% 0 0 0;
 			}
 		}
@@ -149,13 +163,16 @@
 			position: relative;
 		}
 
-		#section3 {
-			background-image: url(imgs/bg1_low.jpg);
-			padding: 6% 0 0 0;
+		#section3 .black-layer h1 {
+			top: 30%;
+			transform: translateY(-30%);
+			position: relative;
 		}
 
-		#section3 .black-layer h1 {
-			color: #000;
+		#section3 .black-layer h2 {
+			top: 35%;
+			transform: translateY(-35%);
+			position: relative;
 		}
 
 		a:link,
@@ -184,7 +201,7 @@
 		$(document).ready(function () {
 			$('#fullpage').fullpage({
 				verticalCentered: false,
-				anchors: ['main', 'timeline', 'amazing-race', 'anchor3'],
+				anchors: ['main', 'timeline', 'amazing-race', 'bowling-competition'],
 				//to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
 				css3: false
 			});
@@ -251,8 +268,16 @@
 				</h2>
 			</div>
 		</div>
-		<div class="section" id="section3" data-anchor="anchor3">
-			<h1>One Image = One thousand words</h1>
+		<div class="section" id="section3" data-anchor="bowling-competition">
+			<div class="black-layer">
+				<h1>Bowling Competition</h1>
+				<h2>Stand to win attractive prizes by participating in DSO Sports Day Bowling Competition!</h2><br><br>
+				<h2>Pit your bowling skills against other staff and emerge as the victor!<br><br>
+					<button type="button" class="btn btn-success btn-lg" onclick="location.href = 'http:\\www.google.com';">
+						View More Details
+					</button>
+				</h2>
+			</div>
 		</div>
 	</div>
 
