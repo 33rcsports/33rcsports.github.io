@@ -174,7 +174,7 @@
 		$(document).ready(function () {
 			$('#fullpage').fullpage({
 				verticalCentered: false,
-				anchors: ['anchor0', 'anchor1', 'anchor2', 'anchor3'],
+				anchors: ['main', 'timeline', 'amazing-race', 'anchor3'],
 				//to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
 				css3: false
 			});
@@ -186,7 +186,7 @@
 
 	<div id="fullpage">
 		<!-- page one -->
-		<div class="section" id="section0" data-anchor="anchor0">
+		<div class="section" id="section0" data-anchor="main">
 			<div class="black-layer">
 				<h1>
 					DSO Sports Day 2017
@@ -202,7 +202,7 @@
 			</div>
 		</div>
 		<!-- page two: timeline -->
-		<div class="section" id="section1" data-anchor="anchor1">
+		<div class="section" id="section1" data-anchor="timeline">
 			<div class="black-layer">
 				<ul class="timeline">
 					<li class="event" data-date="1:00 - 2:00pm">
@@ -210,12 +210,11 @@
 					</li>
 					<li class="event" data-date="2:00 - 3:45pm">
 						<h3>
-							<a href="#anchor2">
+							<a href="#amazing-race">
 								<u>Amazing Race</u>
-							</a> | Rock
-							<Climbing></Climbing>
+							</a> | Rock Climbing | Indoor Courts
 						</h3>
-						<h3>Water Sports | Indoor Courts </h3>
+						<h3>Water Sports | Bowling Competition </h3>
 					</li>
 					<li class="event" data-date="4:00 - 5:30pm">
 						<h3>Mass Walk</h3>
@@ -228,7 +227,7 @@
 			</div>
 		</div>
 		<!-- page three: amazing race -->
-		<div class="section" id="section2" data-anchor="anchor2">
+		<div class="section" id="section2" data-anchor="amazing-race">
 			<div class="black-layer">
 				<h1>Amazing Race!</h1>
 			</div>
