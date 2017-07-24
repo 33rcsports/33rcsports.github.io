@@ -15,24 +15,6 @@
 	<link rel="stylesheet" type="text/css" href="css/examples.css" />
 
 	<style>
-		/* Style for our header texts
-	* --------------------------------------- */
-
-		h1 {
-			font-size: 5vw;
-			font-family: arial, helvetica;
-			color: #fff;
-			margin: 0;
-			padding: 0;
-		}
-
-		h2 {
-			font-size: 2vw;
-			font-family: arial, helvetica;
-			color: #fff;
-			margin: 0;
-			padding: 0;
-		}
 		/* Centered texts in each section
 	* --------------------------------------- */
 
@@ -41,6 +23,15 @@
 		}
 		/* Backgrounds will cover all the section
 	* --------------------------------------- */
+
+		.black-layer {
+			background-color: rgba(0, 0, 0, 0.7);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 
 		#section0,
 		#section1,
@@ -52,6 +43,23 @@
 		/* Defining each section background and styles */
 
 		@media screen and (max-width: 640px) {
+
+			h1 {
+				font-size: 8vw;
+				font-family: arial, helvetica;
+				color: #fff;
+				margin: 0;
+				padding: 0;
+			}
+
+			h2 {
+				font-size: 5vw;
+				font-family: arial, helvetica;
+				color: #fff;
+				margin: 0;
+				padding: 0;
+			}
+
 			#section0 {
 				background-image: url(imgs/bg1_low.jpg);
 				background-position: center;
@@ -70,6 +78,23 @@
 		}
 
 		@media screen and (min-width: 641px) {
+
+			h1 {
+				font-size: 5vw;
+				font-family: arial, helvetica;
+				color: #fff;
+				margin: 0;
+				padding: 0;
+			}
+
+			h2 {
+				font-size: 2vw;
+				font-family: arial, helvetica;
+				color: #fff;
+				margin: 0;
+				padding: 0;
+			}
+
 			#section0 {
 				background-image: url(imgs/bg1.jpg);
 				background-position: center;
@@ -88,14 +113,14 @@
 		}
 
 		#section0 h1 {
-			top: 50%;
-			transform: translateY(-50%);
+			top: 40%;
+			transform: translateY(-40%);
 			position: relative;
 		}
 
 		#section0 h2 {
-			top: 50%;
-			transform: translateY(-50%);
+			top: 45%;
+			transform: translateY(-45%);
 			position: relative;
 		}
 
@@ -119,24 +144,15 @@
 		#section3 h1 {
 			color: #000;
 		}
-		/*Adding background for the slides
-	* --------------------------------------- */
 
-		#slide1 {
-			background-image: url(imgs/bg1.jpg);
-			padding: 6% 0 0 0;
+		a:link, a:visited {
+			color: white;
 		}
 
-		#slide2 {
-			background-image: url(https://alvarotrigo.com/fullPage/imgs/parallax/bg4.jpg);
-			padding: 6% 0 0 0;
+		a:hover {
+			color: red;
 		}
-		/* Bottom menu
-	* --------------------------------------- */
 
-		#infoMenu li a {
-			color: #fff;
-		}
 	</style>
 
 	<!--[if IE]>
@@ -155,7 +171,7 @@
 		$(document).ready(function () {
 			$('#fullpage').fullpage({
 				verticalCentered: false,
-
+				anchors: ['anchor0', 'anchor1', 'anchor2', 'anchor3'],
 				//to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
 				css3: false
 			});
@@ -166,21 +182,33 @@
 <body>
 
 	<div id="fullpage">
-		<div class="section " id="section0">
-			<h1>
-				DSO Sports Day 2017<br>
-			</h1>
-			<h2>
-				(Scroll Down for More Information)
-			</h2>
+		<!-- page one -->
+		<div class="section" id="section0" data-anchor="anchor0">
+			<div class="black-layer">
+				<h1>
+					DSO Sports Day 2017
+				</h1>
+				<h2>
+					31<sup>st</sup> August 2017<br> Singapore Sports Hub
+				</h2>
+				<h2>
+					<a href="#anchor1"><u>(Scroll Down for More Information)</u></a>
+				</h2>
+			</div>
 		</div>
-		<div class="section" id="section1">
-			<h1>Event Timeline</h1>
+		<!-- page two: timeline -->
+		<div class="section" id="section1" data-anchor="anchor1">
+			<div class="black-layer">
+				<h1>Event Timeline</h1>
+			</div>
 		</div>
-		<div class="section" id="section2">
-			<h1>Amazing Race!</h1>
+		<!-- page three: amazing race -->
+		<div class="section" id="section2" data-anchor="anchor2">
+			<div class="black-layer">
+				<h1>Amazing Race!</h1>
+			</div>
 		</div>
-		<div class="section" id="section3">
+		<div class="section" id="section3" data-anchor="anchor3">
 			<h1>One Image = One thousand words</h1>
 		</div>
 	</div>
