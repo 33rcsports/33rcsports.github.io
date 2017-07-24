@@ -42,7 +42,8 @@
 		#section0,
 		#section1,
 		#section2,
-		#section3 {
+		#section3,
+		#section4 {
 			background-size: cover;
 			background-attachment: fixed;
 		}
@@ -88,6 +89,12 @@
 				background-position: center;
 				padding: 6% 0 0 0;
 			}
+
+			#section4 {
+				background-image: url(imgs/bg5.jpg);
+				background-position: center;
+				padding: 6% 0 0 0;
+			}
 		}
 
 		@media screen and (min-width: 641px) {
@@ -127,6 +134,12 @@
 
 			#section3 {
 				background-image: url(imgs/bg4.jpg);
+				background-position: center;
+				padding: 6% 0 0 0;
+			}
+
+			#section4 {
+				background-image: url(imgs/bg5.jpg);
 				background-position: center;
 				padding: 6% 0 0 0;
 			}
@@ -175,6 +188,18 @@
 			position: relative;
 		}
 
+		#section4 .black-layer h1 {
+			top: 30%;
+			transform: translateY(-30%);
+			position: relative;
+		}
+
+		#section4 .black-layer h2 {
+			top: 35%;
+			transform: translateY(-35%);
+			position: relative;
+		}
+
 		a:link,
 		a:visited {
 			color: white;
@@ -201,7 +226,7 @@
 		$(document).ready(function () {
 			$('#fullpage').fullpage({
 				verticalCentered: false,
-				anchors: ['main', 'timeline', 'amazing-race', 'bowling-competition'],
+				anchors: ['main', 'timeline', 'amazing-race', 'bowling-competition', 'water-sports'],
 				//to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
 				css3: false
 			});
@@ -241,7 +266,7 @@
 							<a href="#bowling-competition"><u>Bowling Competition</u></a>
 						</h3>
 						<h3>
-							<a href="#amazing-race"><u>Water Sports</u></a> | 
+							<a href="#water-sports"><u>Water Sports</u></a> | 
 							<a href="#amazing-race"><u>Rock Climbing</u></a> | 
 							<a href="#amazing-race"><u>Indoor Courts</u></a>
 						</h3>
@@ -268,12 +293,25 @@
 				</h2>
 			</div>
 		</div>
+		<!-- page four: bowling competition -->
 		<div class="section" id="section3" data-anchor="bowling-competition">
 			<div class="black-layer">
 				<h1>Bowling Competition</h1>
 				<h2>Stand to win attractive prizes by participating in DSO Sports Day Bowling Competition!</h2><br><br>
 				<h2>Pit your bowling skills against other staff and emerge as the victor!<br><br>
 					<a href="https://hub.dso.org.sg/dsorc33/Pages/33RC_Sports/Sports_Day_2017/Bowling.aspx" class="btn btn-success btn-lg">
+						<i class="fa fa-search" aria-hidden="true"></i> View More Details
+					</a>
+				</h2>
+			</div>
+		</div>
+		<!-- page five: water sports -->
+		<div class="section" id="section4" data-anchor="water-sports">
+			<div class="black-layer">
+				<h1>Water Sports</h1>
+				<h2>Spend a relaxing afternoon by paddling down Kallang Basin!</h2><br><br>
+				<h2>A true playground for water sports enthusiasts!<br><br>
+					<a href="https://hub.dso.org.sg/dsorc33/Pages/33RC_Sports/Sports_Day_2017/Water_Sports.aspx" class="btn btn-success btn-lg">
 						<i class="fa fa-search" aria-hidden="true"></i> View More Details
 					</a>
 				</h2>
