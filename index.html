@@ -209,14 +209,19 @@
 						<h3>Lunch at Kallang Theatre</h3>
 					</li>
 					<li class="event" data-date="2:30 - 4:00pm">
-						<h3><a href="#anchor2"><u>Amazing Race</u></a> | Rock <Climbing></Climbing></h3>
+						<h3>
+							<a href="#anchor2">
+								<u>Amazing Race</u>
+							</a> | Rock
+							<Climbing></Climbing>
+						</h3>
 						<h3>Water Sports | Indoor Courts </h3>
 					</li>
 					<li class="event" data-date="5:00 - 8:00pm">
 						<h3>Mass Walk</h3>
 					</li>
 					<li class="event" data-date="8:30 - 9:30pm">
-						<h3>Closing Speech and Lucky Draw</h3>
+						<h3>Closing Speech by CEO and Lucky Draw</h3>
 					</li>
 				</ul>
 
@@ -240,69 +245,139 @@
 <style>
 	@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Oswald:400,300,700);
 
-	.timeline {
-		border-left: 0.1vw solid #4298C3;
-		background: rgba(255, 255, 255, 0.03);
-		color: rgba(255, 255, 255, 0.9);
-		font-family: 'Source Sans Pro', sans-serif;
-		margin: 10% auto;
-		position: relative;
-		padding-left: 3.3%;
-		padding-top: 1%;
-		list-style: none;
-		text-align: left;
-		font-weight: 100;
-		max-width: 50%;
+	@media screen and (max-width: 640px) {
+		.timeline {
+			border-left: 0.1vw solid #4298C3;
+			background: rgba(255, 255, 255, 0.03);
+			color: rgba(255, 255, 255, 0.9);
+			font-family: 'Source Sans Pro', sans-serif;
+			margin: 10% auto;
+			position: relative;
+			padding-left: 3.3%;
+			padding-top: 1%;
+			list-style: none;
+			text-align: left;
+			font-weight: 100;
+			max-width: 50%;
+		}
+
+		.timeline h1,
+		.timeline h2,
+		.timeline h3 {
+			font-family: 'Oswald', sans-serif;
+			font-weight: 100;
+			font-size: 5vw;
+			color: white;
+		}
+
+		.timeline .event {
+			border-bottom: 1px dashed rgba(255, 255, 255, 0.8);
+			padding-bottom: 2%;
+			margin-bottom: 2%;
+			position: relative;
+		}
+
+		.timeline .event:last-of-type {
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border: none;
+		}
+
+		.timeline .event:before,
+		.timeline .event:after {
+			position: absolute;
+			display: block;
+			top: 0;
+		}
+
+		.timeline .event:before {
+			left: -45%;
+			color: rgba(255, 255, 255, 0.7);
+			content: attr(data-date);
+			text-align: right;
+			font-weight: 100;
+			font-size: 3vw;
+			min-width: 15%;
+			margin-top: 4%;
+		}
+
+		.timeline .event:after {
+			box-shadow: 0 0 0 4px #4298c3;
+			margin-left: -7.7%;
+			background: #313534;
+			border-radius: 50%;
+			height: 1vw;
+			width: 1vw;
+			content: "";
+			margin-top: 6.5%;
+		}
 	}
 
-	.timeline h1,
-	.timeline h2,
-	.timeline h3 {
-		font-family: 'Oswald', sans-serif;
-		font-weight: 100;
-		font-size: 3vw;
-		color: white;
-	}
+	@media screen and (min-width: 641px) {
+		.timeline {
+			border-left: 0.1vw solid #4298C3;
+			background: rgba(255, 255, 255, 0.03);
+			color: rgba(255, 255, 255, 0.9);
+			font-family: 'Source Sans Pro', sans-serif;
+			margin: 10% auto;
+			position: relative;
+			padding-left: 3.3%;
+			padding-top: 1%;
+			list-style: none;
+			text-align: left;
+			font-weight: 100;
+			max-width: 50%;
+		}
 
-	.timeline .event {
-		border-bottom: 1px dashed rgba(255, 255, 255, 0.8);
-		padding-bottom: 2%;
-		margin-bottom: 2%;
-		position: relative;
-	}
+		.timeline h1,
+		.timeline h2,
+		.timeline h3 {
+			font-family: 'Oswald', sans-serif;
+			font-weight: 100;
+			font-size: 3vw;
+			color: white;
+		}
 
-	.timeline .event:last-of-type {
-		padding-bottom: 0;
-		margin-bottom: 0;
-		border: none;
-	}
+		.timeline .event {
+			border-bottom: 1px dashed rgba(255, 255, 255, 0.8);
+			padding-bottom: 2%;
+			margin-bottom: 2%;
+			position: relative;
+		}
 
-	.timeline .event:before,
-	.timeline .event:after {
-		position: absolute;
-		display: block;
-		top: 0;
-	}
+		.timeline .event:last-of-type {
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border: none;
+		}
 
-	.timeline .event:before {
-		left: -25%;
-		color: rgba(255, 255, 255, 0.7);
-		content: attr(data-date);
-		text-align: right;
-		font-weight: 100;
-		font-size: 1.2vw;
-		min-width: 15%;
-		margin-top: 2.5%;
-	}
+		.timeline .event:before,
+		.timeline .event:after {
+			position: absolute;
+			display: block;
+			top: 0;
+		}
 
-	.timeline .event:after {
-		box-shadow: 0 0 0 4px #4298c3;
-		margin-left: -7.7%;
-		background: #313534;
-		border-radius: 50%;
-		height: 1vw;
-		width: 1vw;
-		content: "";
-		margin-top: 3.5%;
+		.timeline .event:before {
+			left: -25%;
+			color: rgba(255, 255, 255, 0.7);
+			content: attr(data-date);
+			text-align: right;
+			font-weight: 100;
+			font-size: 1.2vw;
+			min-width: 15%;
+			margin-top: 2.5%;
+		}
+
+		.timeline .event:after {
+			box-shadow: 0 0 0 4px #4298c3;
+			margin-left: -7.7%;
+			background: #313534;
+			border-radius: 50%;
+			height: 1vw;
+			width: 1vw;
+			content: "";
+			margin-top: 3.5%;
+		}
 	}
 </style>
