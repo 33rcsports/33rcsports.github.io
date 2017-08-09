@@ -46,7 +46,8 @@
 		#section4,
 		#section5,
 		#section6,
-		#section7 {
+		#section7,
+		#section8 {
 			background-size: cover;
 			background-attachment: fixed;
 		}
@@ -116,6 +117,13 @@
 				background-position: center;
 				padding: 6% 0 0 0;
 			}
+			
+			#section8 {
+				background-image: url(imgs/bg9.jpg);
+				background-position: center;
+				padding: 6% 0 0 0;
+			}
+			
 		}
 
 		@media screen and (min-width: 641px) {
@@ -176,9 +184,15 @@
 				background-position: center;
 				padding: 6% 0 0 0;
 			}
-
+			
 			#section7 {
 				background-image: url(imgs/bg8.jpg);
+				background-position: center;
+				padding: 6% 0 0 0;
+			}
+
+			#section8 {
+				background-image: url(imgs/bg9.jpg);
 				background-position: center;
 				padding: 6% 0 0 0;
 			}
@@ -240,13 +254,13 @@
 		}
 
 		#section5 .black-layer h1 {
-			top: 30%;
+			top: 25%;
 			transform: translateY(-30%);
 			position: relative;
 		}
 
 		#section5 .black-layer h2 {
-			top: 35%;
+			top: 30%;
 			transform: translateY(-35%);
 			position: relative;
 		}
@@ -264,12 +278,24 @@
 		}
 
 		#section7 .black-layer h1 {
-			top: 30%;
+			top: 25%;
 			transform: translateY(-30%);
 			position: relative;
 		}
 
 		#section7 .black-layer h2 {
+			top: 30%;
+			transform: translateY(-35%);
+			position: relative;
+		}
+		
+		#section8 .black-layer h1 {
+			top: 30%;
+			transform: translateY(-30%);
+			position: relative;
+		}
+
+		#section8 .black-layer h2 {
 			top: 35%;
 			transform: translateY(-35%);
 			position: relative;
@@ -301,10 +327,10 @@
 		$(document).ready(function () {
 			$('#fullpage').fullpage({
 				verticalCentered: false,
-				anchors: ['main', 'timeline', 'amazing-race', 'bowling-competition', 'water-sports', 'rock-climbing', 'leisure-sports', 'mass-walk'],
+				anchors: ['main', 'timeline', 'amazing-race', 'bowling-competition', 'water-sports', 'rock-climbing', 'leisure-sports', 'dragon-boat', 'mass-walk'],
 				navigation: true,
 				navigationPosition: 'right',
-				navigationTooltips: ['Home', 'Timeline', 'Amazing Race', 'Bowling Competition', 'Water Sports', 'Rock Climbing', 'Leisure Sports', 'Mass Walk'],
+				navigationTooltips: ['Home', 'Timeline', 'Amazing Race', 'Bowling Competition', 'Water Sports', 'Rock Climbing', 'Leisure Sports', 'Dragon Boat', 'Mass Walk'],
 				//to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
 				css3: false
 			});
@@ -346,7 +372,10 @@
 						<h3>
 							<a href="#water-sports"><u>Water Sports</u></a> | 
 							<a href="#rock-climbing"><u>Rock Climbing</u></a> | 
-							<a href="#leisure-sports"><u>Indoor Courts</u></a>
+						</h3>
+						<h3>
+							<a href="#leisure-sports"><u>Indoor Courts</u></a> | 
+							<a href="#dragon-boat"><u>Dragon Boat</u></a>
 						</h3>
 					</li>
 					<li class="event" data-date="3:45 - 5:30pm">
@@ -428,8 +457,22 @@
 				</h2>
 			</div>
 		</div>
-		<!-- page six: rock climbing -->
-		<div class="section" id="section7" data-anchor="mass-walk">
+		<!-- page eight: dragon boat-->
+		<div class="section" id="section7" data-anchor="dragon-boat">
+			<div class="black-layer">
+				<h1>Dragon Boat</h1>
+				<h2>Organised entirely by our very own DSO Dragon Boat team!</h2><br><br>
+				<h2>Join them for a day of exciting rowing experience now!​<br><br></h2>
+				<h2>*Do note that registration is required for this activity.<br><br></h2>
+				<h2>
+					<a href="https://hub.dso.org.sg/dsorc33/Pages/33RC_Sports/Sports_Day_2017/Dragon_Boat.aspx" class="btn btn-success btn-lg">
+						<i class="fa fa-search" aria-hidden="true"></i> View More Details
+					</a>
+				</h2>
+			</div>
+		</div>
+		<!-- page nine: mass walk -->
+		<div class="section" id="section8" data-anchor="mass-walk">
 			<div class="black-layer">
 				<h1>Mass Walk</h1>
 				<h2>Finish DSO Sports Day with a breezy walk along the Tanjong Rhu Promenade with scenic views!</h2><br><br>
@@ -528,7 +571,7 @@
 			background: rgba(255, 255, 255, 0.03);
 			color: rgba(255, 255, 255, 0.9);
 			font-family: 'Source Sans Pro', sans-serif;
-			margin: 10% auto;
+			margin: 8% auto;
 			position: relative;
 			padding-left: 3.3%;
 			padding-top: 1%;
